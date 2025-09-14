@@ -1,7 +1,7 @@
 ---
 - block:
     - name: "[ Linux ] Comprimir archivos a backup"
-      archive:
+      community.general.archive:
         path: "{{ item }}"
         dest: "/tmp/backup_{{ cambio }}_{{ inventory_hostname }}.tar.gz"
       loop:
@@ -17,7 +17,7 @@
 
 - block: 
     - name: "[ Solaris ] Comprimir archivos a backup"
-      archive:
+      community.general.archive:
         path: "{{ item }}"
         dest: "/tmp/backup_{{ cambio }}_{{ inventory_hostname }}.tar.gz"  
       loop:
@@ -32,7 +32,7 @@
 
 - block: 
     - name: "[ AIX ] Comprimir archivos a backup"
-      archive:
+      community.general.archive:
         path: "{{ item }}"
         dest: "/tmp/backup_{{ cambio }}_{{ inventory_hostname }}.tar.gz" 
       loop:
